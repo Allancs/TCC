@@ -1,11 +1,11 @@
 object Principal: TPrincipal
-  Left = 198
+  Left = 206
   Top = 146
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
   ClientHeight = 441
-  ClientWidth = 758
+  ClientWidth = 750
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,7 +21,7 @@ object Principal: TPrincipal
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 758
+    Width = 750
     Height = 441
     Align = alClient
     Picture.Data = {
@@ -336,9 +336,9 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
   end
-  object Mail: TBitBtn
-    Left = 592
-    Top = 280
+  object Env: TBitBtn
+    Left = 384
+    Top = 50
     Width = 115
     Height = 33
     Caption = 'Envio Email'
@@ -349,7 +349,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    OnClick = MailClick
+    Visible = False
+    OnClick = EnvClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -408,9 +409,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn1: TBitBtn
-    Left = 226
-    Top = 136
+  object A: TBitBtn
+    Left = 5
+    Top = 274
     Width = 115
     Height = 33
     Caption = '&Avisos'
@@ -421,7 +422,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    OnClick = BitBtn1Click
+    OnClick = AClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -480,9 +481,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn2: TBitBtn
-    Left = 123
-    Top = 8
+  object Con: TBitBtn
+    Left = 5
+    Top = 394
     Width = 115
     Height = 33
     Caption = '&Contas'
@@ -493,7 +494,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
-    OnClick = BitBtn2Click
+    Visible = False
+    OnClick = ConClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -552,8 +554,8 @@ object Principal: TPrincipal
       77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn3: TBitBtn
-    Left = 244
+  object Des: TBitBtn
+    Left = 140
     Top = 8
     Width = 115
     Height = 33
@@ -565,7 +567,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
-    OnClick = BitBtn3Click
+    Visible = False
+    OnClick = DesClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -624,8 +627,8 @@ object Principal: TPrincipal
       52B57D52B57D52B57D52B57E52B57D52B57D52B57D52B57D52B57D52A2693FF8
       F6F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn4: TBitBtn
-    Left = 365
+  object Fun: TBitBtn
+    Left = 261
     Top = 8
     Width = 115
     Height = 33
@@ -637,7 +640,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
-    OnClick = BitBtn4Click
+    Visible = False
+    OnClick = FunClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000936645936645
@@ -696,9 +700,9 @@ object Principal: TPrincipal
       52B57D52B57D52B57D52B57E52B57E52B57D52B57D52B57D52B57D52B57D52B5
       7D52B57D52B57D52B57D52B57D52B57D52B57D52FFFFFFFFFFFF}
   end
-  object BitBtn5: TBitBtn
-    Left = 486
-    Top = 8
+  object I: TBitBtn
+    Left = 5
+    Top = 194
     Width = 115
     Height = 33
     Caption = '&Incidentes'
@@ -709,7 +713,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
-    OnClick = BitBtn5Click
+    OnClick = IClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -768,9 +772,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn6: TBitBtn
-    Left = 591
-    Top = 240
+  object Resp: TBitBtn
+    Left = 261
+    Top = 50
     Width = 115
     Height = 33
     Caption = '&Responsaveis'
@@ -781,7 +785,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
-    OnClick = BitBtn6Click
+    Visible = False
+    OnClick = RespClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -840,9 +845,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn7: TBitBtn
-    Left = 226
-    Top = 170
+  object Par: TBitBtn
+    Left = 5
+    Top = 354
     Width = 115
     Height = 33
     Caption = '&Parceiros'
@@ -853,7 +858,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
-    OnClick = BitBtn7Click
+    Visible = False
+    OnClick = ParClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -912,9 +918,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn8: TBitBtn
-    Left = 123
-    Top = 42
+  object Pro: TBitBtn
+    Left = 5
+    Top = 314
     Width = 115
     Height = 33
     Caption = '&Profissionais'
@@ -925,7 +931,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 8
-    OnClick = BitBtn8Click
+    Visible = False
+    OnClick = ProClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -984,9 +991,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFF767672767672767672767672767672767672FF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn9: TBitBtn
-    Left = 244
-    Top = 42
+  object Res: TBitBtn
+    Left = 140
+    Top = 50
     Width = 115
     Height = 33
     Caption = '&Residente'
@@ -997,7 +1004,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 9
-    OnClick = BitBtn9Click
+    Visible = False
+    OnClick = ResClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1056,9 +1064,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn10: TBitBtn
-    Left = 365
-    Top = 42
+  object S: TBitBtn
+    Left = 5
+    Top = 154
     Width = 115
     Height = 33
     Caption = '&Sa'#250'de'
@@ -1069,7 +1077,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 10
-    OnClick = BitBtn10Click
+    OnClick = SClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1128,9 +1136,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object BitBtn11: TBitBtn
-    Left = 486
-    Top = 42
+  object T: TBitBtn
+    Left = 5
+    Top = 234
     Width = 115
     Height = 33
     Caption = '&Tarefa'
@@ -1141,7 +1149,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 11
-    OnClick = BitBtn11Click
+    OnClick = TClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFF926544
@@ -1200,9 +1208,9 @@ object Principal: TPrincipal
       51B47C51B47C51B47C51B47C51B47D51B47D51B47C51B47C51B47C51B47C51B4
       7C51B47C51B47C51B47C51B47C51B47C51B47C51B47C51FFFFFF}
   end
-  object BitBtn12: TBitBtn
-    Left = 591
-    Top = 274
+  object Vol: TBitBtn
+    Left = 383
+    Top = 8
     Width = 115
     Height = 33
     Caption = '&Voluntario'
@@ -1213,7 +1221,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 12
-    OnClick = BitBtn12Click
+    Visible = False
+    OnClick = VolClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1273,9 +1282,9 @@ object Principal: TPrincipal
       9EA86262726262729E9EA8F6F6F7FFFFFFFFFFFFFFFFFFFFFFFF}
   end
   object Aviso: TGroupBox
-    Left = 488
+    Left = 144
     Top = 96
-    Width = 329
+    Width = 353
     Height = 105
     Caption = 'Avisos  '
     Font.Charset = DEFAULT_CHARSET
@@ -1286,49 +1295,70 @@ object Principal: TPrincipal
     ParentFont = False
     TabOrder = 13
     Visible = False
-    object DBText1: TDBText
-      Left = -32
-      Top = 88
-      Width = 313
-      Height = 57
-      DataField = 'OBS'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
     object DBText2: TDBText
-      Left = 40
+      Left = 56
       Top = 24
-      Width = 65
+      Width = 249
       Height = 17
       DataField = 'DATA'
-      DataSource = Modulo.dsAvisos
+      DataSource = Modulo.dsAviso
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Style = [fsItalic]
       ParentFont = False
     end
-    object Data: TDBText
-      Left = 8
-      Top = 24
-      Width = 33
+    object DBText1: TDBText
+      Left = 56
+      Top = 48
+      Width = 265
       Height = 17
+      DataField = 'OBS'
+      DataSource = Modulo.dsAviso
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Style = [fsItalic]
       ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 2
+      Top = 23
+      Width = 52
+      Height = 20
+      Caption = 'Data :'
+    end
+    object Label2: TLabel
+      Left = 2
+      Top = 47
+      Width = 55
+      Height = 20
+      Caption = 'Aviso :'
+    end
+    object px: TButton
+      Left = 192
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = 'Proximo'
+      TabOrder = 0
+      OnClick = pxClick
+    end
+    object an: TButton
+      Left = 272
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = 'Anterior'
+      TabOrder = 1
+      OnClick = anClick
     end
   end
-  object BitBtn13: TBitBtn
-    Left = 592
-    Top = 314
+  object Ser: TBitBtn
+    Left = 504
+    Top = 10
     Width = 115
     Height = 33
     Caption = '&Servidor SMTP'
@@ -1339,7 +1369,8 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 14
-    OnClick = BitBtn13Click
+    Visible = False
+    OnClick = SerClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFF3F9FD
@@ -1399,9 +1430,9 @@ object Principal: TPrincipal
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
   object GP1: TGroupBox
-    Left = 472
+    Left = 504
     Top = 96
-    Width = 265
+    Width = 241
     Height = 105
     Caption = 'Selecione os Avisos que seram exibidos na tela'
     TabOrder = 15
@@ -1414,14 +1445,78 @@ object Principal: TPrincipal
       TabOrder = 0
     end
   end
-  object Button1: TButton
-    Left = 272
-    Top = 208
-    Width = 75
-    Height = 25
+  object Avali: TBitBtn
+    Left = 504
+    Top = 50
+    Width = 115
+    Height = 33
     Caption = 'Avalia'#231#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 16
-    OnClick = Button1Click
+    Visible = False
+    OnClick = pxClick
+    Glyph.Data = {
+      F6060000424DF606000000000000360000002800000018000000180000000100
+      180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFCFCFCEAEAEACACACA9B94A98169A7856BACA090BDF2
+      F1F6FFFFFF926544926544926644926644926643926544926644926644926543
+      926643926543926644926543926644906442845C3D6F4D33918176A2A2A2978F
+      A5AF9CD38D71C5A193C8FFFFFF946744E3CAACE4CAACE3CBACE3CBACE3CBACE4
+      CAADE3CAADE4CAADE4CBACE4CAADE4CAACE4CBACDEC5A8CBB399A595806592AA
+      88A7BF8081828E8E90D2D2D89A8DD18070D0FFFFFF956845E5CCAFE4CCAFE4CC
+      AFE5CCAFE5CCAFE4CCAEE4CCAFE4CCAFE4CCAFE4CCAFE3CBAEDBC4A8C4B0979B
+      9182368EC02099F02C9BF766AFF3D9DCE38383867272766860CDFFFFFF976945
+      E5CFB2E5CEB2A8744DA8744DA8744DE5CFB2A8744DA8744DA8744DA7734C9F6E
+      498B6040615B53208CCF2099F12D9BF8389FFE47A8FF73BAF06C737735353576
+      76A7FFFFFF996A46E6D1B6E6D1B5E6D1B6E6D0B6E6D0B6E6D1B6E6D0B6E6D0B6
+      E3CEB3D6C0A9B8A692768A8F1F95DF239AF22E9CF93AA0FE48A9FF58B6FB68C4
+      F76294A8454545ECECF0FFFFFF9A6C47E7D3BAE7D3BAE7D3B9E7D3BAE7D3BAE7
+      D3BAE7D3B9E3D0B7D3C1AAB2A38F5C8BA01A97E82499F3309CFA3BA0FE4AABFE
+      5AB8FA6AC7F683D6F98DCDF1DEDEDEFFFFFFFFFFFF9D6D48E8D6BEE8D6BEA874
+      4DA8744DA8744DA8744DA5724B9768457D583A39708C1998EB259AF3319CFB3E
+      A2FF4CACFE5CB9FA6CC8F685D7FA86D1FCE2EEF6FEFEFEFFFFFFFFFFFF9F6E49
+      E9D9C3E9D9C2E9D9C3E9D9C3E9D9C3E8D8C2D6C5B2AC9F9069A9C947B1F132A0
+      F5329DFB3FA2FF4FAEFD5DBBF96EC9F687D8FB84CEFADDEBF5FEFEFEFFFFFFFF
+      FFFFFFFFFFA1704AEBDBC8EBDCC9EADBC8EADCC8EBDBC9E3D5C1C1B4A4919998
+      C1EEFFD2F4FFB7E9FF5DB5FF50AFFD60BDF96FCAF688D9FB78C5F7D2E6F5FEFE
+      FEFFFFFFFFFFFFFFFFFFFFFFFFA3724AEBDECDEBDECDA8744DA8744DA8744D9D
+      6C487C56397A96A0CDF3FFD8F8FFD5F7FFBDEDFF73C9FA75CEF689D9FC76C5F8
+      897B71FEFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA6734BEDE1D2EDE1D1ECE1
+      D1EDE1D2EBDFCFD1C7B79D958A97D2EDC7F3FFCAF4FFCAF4FFC8F3FFA2E3FE8B
+      D9FD6EC4FEB5CAD4A5714AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA8744C
+      EEE5D6EEE4D6EEE4D6EEE4D6E6DCCEBFB8AC84837E8FA2A7AFDCE9BAEFFFBAEF
+      FFBAEFFF9FE2FF66BDFAAFC8D8ECE2D4A8754CFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFAA764DEFE7DAEFE7DAA8744DA8744D9C6C477C56396E6A65797979
+      6F8084ACEBFFAAEAFFA6E8FF7ECEFA867B74EDE5D8EFE7DAAB764DFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFAD774EF0EADEF0EADEF0E9DEF0E9DEE0D9CFBB
+      B7AE4A4947323130515B5C9CC9DBA6C9D4BCCED2D6D9D7EEE7DCF0E9DFF0EADE
+      AD774EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAE794FF1ECE1F1ECE2A874
+      4DA8744DA4714BDFDAD1D9D5CCDBD7CFE0DBD2E5E0D6E9E5DBEEE9DEF0EAE1F1
+      ECE2F1ECE2F1EBE2AE794FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB07A50
+      F1EEE6F2EEE5A8744DA8744DA8744DF1EEE5F2EEE5A8744DA8744DA8744DA874
+      4DA8744DA8744DA8744DF1EEE5F2EEE6B07950FFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFB17B50F3EFE7F3F0E8F2EFE8F2F0E8F3EFE8F2F0E8F2EFE7F3EFE8
+      F3F0E8F2F0E8F2EFE8F2F0E7F2F0E8F3F0E7F3F0E8F3F0E8B17A50FFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFF7E3C19AEA27FAEA27FAEA27FAEA27FAEA27FAE
+      A27FAEA27FAEA27FAEA27FAEA27FAEA27FAEA27FAEA27FAEA27FAEA27FAEA27F
+      7E3B19FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9479609479609679609579
+      60977A5F987B5F997B5F9A7C5F9A7C5E9C7C5E9D7D5D9E7E5D9E7F5C9F7E5CA0
+      805CA1805CA2805BA4825BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF927861
+      DEBFA1DBBC9CD8B897D6B492D3AF8DD0AA88CCA582CAA07CC59C77C29772C093
+      6CBD8F67BA8A62B8865EB68359B47F55A2805BFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFF917761E4CBB1E2C8ADDFC4A9DEC1A5DBBDA0D8B99CD7B697D3B192
+      D1AD8ECEA989CBA584C9A080C59D7BC39A77C19674BF9470A0805CFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFF917761F7EFE6F6EEE5F5EDE4F5ECE3F4EBE1F3
+      E9E0F2E8DFF1E7DDF0E6DBEFE4DAEFE3D8EEE1D7EDE0D5ECDFD4ECDED2EBDDD1
+      9F7E5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9D8774A08A78A08A78A18A
+      77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
+      8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
   object PoupUP: TTimer
     Interval = 1
@@ -1463,8 +1558,9 @@ object Principal: TPrincipal
         OnClick = Voluntarios1Click
       end
     end
-    object Email1: TMenuItem
+    object email: TMenuItem
       Caption = '&Email'
+      Visible = False
       object EnviodeEmail1: TMenuItem
         Caption = '&Envio de Email'
         OnClick = EnviodeEmail1Click
@@ -1520,6 +1616,6 @@ object Principal: TPrincipal
     Interval = 1
     OnTimer = CheckTimer
     Left = 144
-    Top = 232
+    Top = 208
   end
 end
