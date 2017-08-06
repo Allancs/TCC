@@ -1,5 +1,5 @@
 object Parceiros: TParceiros
-  Left = 207
+  Left = 99
   Top = 125
   Width = 928
   Height = 480

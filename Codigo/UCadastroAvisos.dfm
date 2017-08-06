@@ -536,7 +536,6 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Editar'
-    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -610,7 +609,6 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Inserir'
-    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -684,7 +682,6 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Deletar'
-    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

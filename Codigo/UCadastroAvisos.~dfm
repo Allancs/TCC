@@ -544,6 +544,7 @@ object CadastroAvisos: TCadastroAvisos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    Visible = False
     OnClick = btnEditarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -617,6 +618,7 @@ object CadastroAvisos: TCadastroAvisos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    Visible = False
     OnClick = btnInserirClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -690,6 +692,7 @@ object CadastroAvisos: TCadastroAvisos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
+    Visible = False
     OnClick = btnDeletarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -763,6 +766,7 @@ object CadastroAvisos: TCadastroAvisos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
+    Visible = False
     OnClick = btnCancelarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -836,6 +840,7 @@ object CadastroAvisos: TCadastroAvisos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
+    Visible = False
     OnClick = btnGravarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100

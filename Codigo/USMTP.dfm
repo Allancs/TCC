@@ -1,6 +1,6 @@
 object SMTP: TSMTP
-  Left = 460
-  Top = 304
+  Left = 241
+  Top = 301
   Width = 698
   Height = 143
   Caption = 'SMTP'

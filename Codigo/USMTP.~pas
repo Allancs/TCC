@@ -34,6 +34,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -167,6 +168,17 @@ end;
 procedure TSMTP.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Next;
+end;
+
+procedure TSMTP.FormCreate(Sender: TObject);
+begin
+if DBEdit1.Text = ''
+Then Begin
+      btnEditar.Enabled := False;
+      End
+      Else Begin
+      btnEditar.Enabled := True;;
+      End;
 end;
 
 end.

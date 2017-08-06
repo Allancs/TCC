@@ -39,7 +39,7 @@ object Tarefa: TTarefa
   end
   object Esquerda: TSpeedButton
     Left = 234
-    Top = 347
+    Top = 339
     Width = 23
     Height = 25
     Glyph.Data = {
@@ -157,9 +157,9 @@ object Tarefa: TTarefa
   end
   object Direita: TSpeedButton
     Left = 204
-    Top = 347
+    Top = 339
     Width = 23
-    Height = 22
+    Height = 25
     Glyph.Data = {
       B60D0000424DB60D000000000000360000002800000030000000180000000100
       180000000000800D000000000000000000000000000000000000FFFFFFFFFFFF
@@ -314,6 +314,7 @@ object Tarefa: TTarefa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    Visible = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -386,6 +387,7 @@ object Tarefa: TTarefa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    Visible = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -458,6 +460,7 @@ object Tarefa: TTarefa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
+    Visible = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -530,6 +533,7 @@ object Tarefa: TTarefa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
+    Visible = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -602,6 +606,7 @@ object Tarefa: TTarefa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
+    Visible = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF

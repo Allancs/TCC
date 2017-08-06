@@ -10,25 +10,23 @@ uses
 
 type
   TPrincipal = class(TForm)
-    Mail: TBitBtn;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
-    BitBtn7: TBitBtn;
-    BitBtn8: TBitBtn;
-    BitBtn9: TBitBtn;
-    BitBtn10: TBitBtn;
-    BitBtn11: TBitBtn;
-    BitBtn12: TBitBtn;
+    Env: TBitBtn;
+    A: TBitBtn;
+    Con: TBitBtn;
+    Des: TBitBtn;
+    Fun: TBitBtn;
+    I: TBitBtn;
+    Resp: TBitBtn;
+    Par: TBitBtn;
+    Pro: TBitBtn;
+    Res: TBitBtn;
+    S: TBitBtn;
+    T: TBitBtn;
+    Vol: TBitBtn;
     PoupUP: TTimer;
     Aviso: TGroupBox;
-    DBText1: TDBText;
     DBText2: TDBText;
-    Data: TDBText;
-    BitBtn13: TBitBtn;
+    Ser: TBitBtn;
     GP1: TGroupBox;
     AvisosPoP: TCheckBox;
     MainMenu1: TMainMenu;
@@ -36,7 +34,7 @@ type
     Funcionarios1: TMenuItem;
     Residentes1: TMenuItem;
     Responsaveis1: TMenuItem;
-    Email1: TMenuItem;
+    email: TMenuItem;
     EnviodeEmail1: TMenuItem;
     SMTP: TMenuItem;
     Conta: TMenuItem;
@@ -52,26 +50,31 @@ type
     Saude: TMenuItem;
     Saude1: TMenuItem;
     incidentes1: TMenuItem;
-    Button1: TButton;
     UNome: TLabel;
     Image1: TImage;
     Rela: TMenuItem;
     Check: TTimer;
-    procedure MailClick(Sender: TObject);
-    procedure BitBtn12Click(Sender: TObject);
-    procedure BitBtn1Click(Sender: TObject);
+    Avali: TBitBtn;
+    px: TButton;
+    an: TButton;
+    DBText1: TDBText;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure EnvClick(Sender: TObject);
+    procedure VolClick(Sender: TObject);
+    procedure AClick(Sender: TObject);
     procedure PoupUPTimer(Sender: TObject);
-    procedure BitBtn13Click(Sender: TObject);
-    procedure BitBtn9Click(Sender: TObject);
-    procedure BitBtn6Click(Sender: TObject);
-    procedure BitBtn3Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
-    procedure BitBtn4Click(Sender: TObject);
-    procedure BitBtn5Click(Sender: TObject);
-    procedure BitBtn7Click(Sender: TObject);
-    procedure BitBtn8Click(Sender: TObject);
-    procedure BitBtn10Click(Sender: TObject);
-    procedure BitBtn11Click(Sender: TObject);
+    procedure SerClick(Sender: TObject);
+    procedure ResClick(Sender: TObject);
+    procedure RespClick(Sender: TObject);
+    procedure DesClick(Sender: TObject);
+    procedure ConClick(Sender: TObject);
+    procedure FunClick(Sender: TObject);
+    procedure IClick(Sender: TObject);
+    procedure ParClick(Sender: TObject);
+    procedure ProClick(Sender: TObject);
+    procedure SClick(Sender: TObject);
+    procedure TClick(Sender: TObject);
     procedure Funcionarios1Click(Sender: TObject);
     procedure Avisos1Click(Sender: TObject);
     procedure Conta1Click(Sender: TObject);
@@ -86,10 +89,11 @@ type
     procedure arefas1Click(Sender: TObject);
     procedure Voluntarios1Click(Sender: TObject);
     procedure SMTPClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure pxClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure CheckTimer(Sender: TObject);
+    procedure anClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -109,17 +113,17 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
 
 {$R *.dfm}
 
-procedure TPrincipal.MailClick(Sender: TObject);
+procedure TPrincipal.EnvClick(Sender: TObject);
 begin
 Email.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn12Click(Sender: TObject);
+procedure TPrincipal.VolClick(Sender: TObject);
 begin
 Voluntarios.visible := true;
 end;
 
-procedure TPrincipal.BitBtn1Click(Sender: TObject);
+procedure TPrincipal.AClick(Sender: TObject);
 begin
 CadastroAvisos.Visible := True;
 end;
@@ -148,57 +152,57 @@ begin
       End;
   end;
 
-procedure TPrincipal.BitBtn13Click(Sender: TObject);
+procedure TPrincipal.SerClick(Sender: TObject);
 begin
 SMTP.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn9Click(Sender: TObject);
+procedure TPrincipal.ResClick(Sender: TObject);
 begin
 Idoso.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn6Click(Sender: TObject);
+procedure TPrincipal.RespClick(Sender: TObject);
 begin
 Responsavel.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn3Click(Sender: TObject);
+procedure TPrincipal.DesClick(Sender: TObject);
 begin
 Despesas.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn2Click(Sender: TObject);
+procedure TPrincipal.ConClick(Sender: TObject);
 begin
 Contas.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn4Click(Sender: TObject);
+procedure TPrincipal.FunClick(Sender: TObject);
 begin
 Funcionario.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn5Click(Sender: TObject);
+procedure TPrincipal.IClick(Sender: TObject);
 begin
 Incidentes.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn7Click(Sender: TObject);
+procedure TPrincipal.ParClick(Sender: TObject);
 begin
 Parceiros.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn8Click(Sender: TObject);
+procedure TPrincipal.ProClick(Sender: TObject);
 begin
 Profissionais.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn10Click(Sender: TObject);
+procedure TPrincipal.SClick(Sender: TObject);
 begin
 Saudes.Visible := True;
 end;
 
-procedure TPrincipal.BitBtn11Click(Sender: TObject);
+procedure TPrincipal.TClick(Sender: TObject);
 begin
 Tarefa.Visible := True;
 end;
@@ -273,9 +277,9 @@ begin
 SMTP.Visible := True;
 end;
 
-procedure TPrincipal.Button1Click(Sender: TObject);
+procedure TPrincipal.pxClick(Sender: TObject);
 begin
-Avaliacao.Visible := True;
+Modulo.cdsAviso.Prior;
 end;
 
 procedure TPrincipal.Button2Click(Sender: TObject);
@@ -300,6 +304,7 @@ begin
                   Conta.Visible := true;
                   Rela.Visible := true;
                   SMTP.Visible := true;
+                  email.Visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
                   CadastroAvisos.btnCancelar.visible := true;
@@ -310,8 +315,24 @@ begin
                   Tarefa.btnCancelar.visible := true;
                   Tarefa.btnDeletar.visible := true;
                   Tarefa.btnGravar.visible := true;
+                  pro.visible := true;
+                  par.visible := true;
+                  con.visible := true;
+                  des.visible := true;
+                  res.visible := true;
+                  fun.visible := true;
+                  resp.visible := true;
+                  vol.visible := true;
+                  env.visible := true;
+                  ser.visible := true;
+                  avali.visible := true;
                     Exit;
                   End;
+end;
+
+procedure TPrincipal.anClick(Sender: TObject);
+begin
+Modulo.cdsAviso.Next;
 end;
 
 end.
