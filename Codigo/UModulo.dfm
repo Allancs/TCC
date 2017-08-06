@@ -837,14 +837,14 @@ object Modulo: TModulo
     Top = 8
   end
   object Conexao2: TSQLConnection
-    ConnectionName = 'LoginServer'
+    ConnectionName = 'Asilo'
     DriverName = 'Interbase'
     GetDriverFunc = 'getSQLDriverINTERBASE'
     LibraryName = 'dbexpint.dll'
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=PC:C:\Asilo\Banco\LOGIN.FDB'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -858,9 +858,8 @@ object Modulo: TModulo
       'Interbase TransIsolation=ReadCommited'
       'Trim Char=False')
     VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
-    Connected = True
-    Left = 40
-    Top = 368
+    Left = 16
+    Top = 360
   end
   object sdsUser: TSimpleDataSet
     Active = True
@@ -870,8 +869,8 @@ object Modulo: TModulo
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 144
-    Top = 368
+    Left = 72
+    Top = 360
     object sdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -907,45 +906,20 @@ object Modulo: TModulo
     Top = 368
   end
   object sqlDSLogin: TSQLDataSet
-    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Conexao2
-    Left = 96
+    Left = 168
     Top = 368
-    object sqlDSLoginID: TIntegerField
-      FieldName = 'ID'
-      Required = True
-    end
-    object sqlDSLoginUSU_NOME: TStringField
-      FieldName = 'USU_NOME'
-      Required = True
-      Size = 40
-    end
-    object sqlDSLoginUSU_EMAIL: TStringField
-      FieldName = 'USU_EMAIL'
-      Required = True
-      Size = 40
-    end
-    object sqlDSLoginUSU_LOGIN: TStringField
-      FieldName = 'USU_LOGIN'
-      Required = True
-      Size = 40
-    end
-    object sqlDSLoginUSU_SENHA: TStringField
-      FieldName = 'USU_SENHA'
-      Required = True
-      Size = 40
-    end
   end
   object cdsUser: TClientDataSet
     Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'
-    Left = 240
-    Top = 416
+    Left = 208
+    Top = 368
     object cdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -972,8 +946,8 @@ object Modulo: TModulo
     end
   end
   object dspUser: TDataSetProvider
-    DataSet = sqlDSLogin
-    Left = 200
-    Top = 416
+    DataSet = sdsUser
+    Left = 128
+    Top = 368
   end
 end

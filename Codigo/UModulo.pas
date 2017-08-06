@@ -172,11 +172,6 @@ type
     cdsUserUSU_EMAIL: TStringField;
     cdsUserUSU_LOGIN: TStringField;
     cdsUserUSU_SENHA: TStringField;
-    sqlDSLoginID: TIntegerField;
-    sqlDSLoginUSU_NOME: TStringField;
-    sqlDSLoginUSU_EMAIL: TStringField;
-    sqlDSLoginUSU_LOGIN: TStringField;
-    sqlDSLoginUSU_SENHA: TStringField;
   private
     { Private declarations }
   public

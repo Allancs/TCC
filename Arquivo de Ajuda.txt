@@ -50,3 +50,19 @@ Permissão Padrao
 CADASTRAR 
 S/ Relatorio
 Não pode excluir
+Permissoes
+pro.visible := true;
+par.visible := true; 
+con.visible := true;
+des.visible := true;
+res.visible := true;
+fun.visible := true;
+resp.visible := true;
+vol.visible := true;
+env.visible := true;
+ser.visible := true;
+avali.visible := true;
+Residente
+Responsavel
+
+

@@ -965,7 +965,7 @@ object CadastroContas: TCadastroContas
   object sqlAux: TSQLQuery
     MaxBlobSize = -1
     Params = <>
-    SQLConnection = Modulo.Conexao
+    SQLConnection = Modulo.Conexao2
     Left = 528
     Top = 464
   end

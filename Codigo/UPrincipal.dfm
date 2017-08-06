@@ -1473,7 +1473,7 @@ object Principal: TPrincipal
     ParentFont = False
     TabOrder = 16
     Visible = False
-    OnClick = pxClick
+    OnClick = AvaliClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
