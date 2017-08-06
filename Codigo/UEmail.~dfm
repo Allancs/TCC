@@ -1,9 +1,9 @@
-object Email: TEmail
-  Left = 266
-  Top = 186
-  Width = 821
-  Height = 338
-  Caption = 'Email'
+object Emails: TEmails
+  Left = 184
+  Top = 187
+  Width = 896
+  Height = 434
+  Caption = 'Emails'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -231,8 +231,8 @@ object Email: TEmail
     TabOrder = 8
   end
   object GroupBox1: TGroupBox
-    Left = 432
-    Top = 8
+    Left = 424
+    Top = 16
     Width = 361
     Height = 241
     Caption = 'Pesquisa de email por Nome'

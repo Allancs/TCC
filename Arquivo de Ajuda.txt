@@ -1,0 +1,42 @@
+Menu
+Cadastros \ Cadastro
+Contas e Despesas \ Conta
+Avisos e Tarefas \ Desligar Cadastro deixar so ligado os botoes de navegação
+Relatorios \ rela
+Servidor SMTP \ SMTP
+E Botoes de Excluir
+Irão ser liberados para os usuarios
+btnEditar
+
+Tarefa
+CadastroAvisos
+CadastroAvisos.btnEditar.Enable := true;
+CadastroAvisos.btnInserir.Enable := true;
+CadastroAvisos.btnCancelar.Enable := true;
+CadastroAvisos.btnDeletar.Enable := true;
+CadastroAvisos.btnGravar.Enable := true;
+Tarefa.btnEditar.Enable := true;
+Tarefa.btnInserir.Enable := true;
+Tarefa.btnCancelar.Enable := true;
+Tarefa.btnDeletar.Enable := true;
+Tarefa.btnGravar.Enable := true;
+pro.visible := true;
+par.visible := true; 
+con.visible := true;
+des.visible := true;
+res.visible := true;
+fun.visible := true;
+resp.visible := true;
+vol.visible := true;
+env.visible := true;
+ser.visible := true;
+avali.visible := true;
+
+    If (ULogin.User = 'Allan')
+             Then Begin
+                  Cadastro.Visible := true;
+                  Conta.Visible := true;
+                  Rela.Visible := true;
+                  SMTP := true;
+                    Exit;
+                  End;

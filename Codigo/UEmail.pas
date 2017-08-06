@@ -10,7 +10,7 @@ uses
   DBClient, SimpleDS, SqlExpr, Grids, DBGrids;
 
 type
-  TEmail = class(TForm)
+  TEmails = class(TForm)
     Label1: TLabel;
     Label2: TLabel;
     Label5: TLabel;
@@ -78,7 +78,7 @@ type
   end;
 
 var
-  Email: TEmail;
+  Emails: TEmails;
 
 implementation
 
@@ -86,13 +86,13 @@ uses UModulo;
 
 {$R *.dfm}
 
-procedure TEmail.FormCreate(Sender: TObject);
+procedure TEmails.FormCreate(Sender: TObject);
 begin
 Menssagem.Clear;
 De.Text:=Usuario.Text;
 end;
 
-procedure TEmail.edtPesquisaChange(Sender: TObject);
+procedure TEmails.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
 begin
  if Parceiros.Checked = true
@@ -139,13 +139,13 @@ begin
           end;
 
     end;
-procedure TEmail.DBCellClick(Column: TColumn);
+procedure TEmails.DBCellClick(Column: TColumn);
 begin
 Label3.Caption:=Column.Field.AsString;
 Para.Text:=Column.Field.AsString;
 end;
 
-procedure TEmail.FormKeyDown(Sender: TObject; var Key: Word;
+procedure TEmails.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 
 
@@ -154,7 +154,7 @@ if (Sender as TForm).ActiveControl is TDBGrid then
 if key in [vk_DOWN,vk_Up,vk_LEFT,vk_RIGHT] then begin
 end;
 end;
-procedure TEmail.BitBtn1Click(Sender: TObject);
+procedure TEmails.BitBtn1Click(Sender: TObject);
 var
 Texto : String;
 begin
@@ -176,7 +176,7 @@ begin
 //Para.Text:=Texto +' , '+ getEmail.Text;
 end;
 
-procedure TEmail.BitBtn2Click(Sender: TObject);
+procedure TEmails.BitBtn2Click(Sender: TObject);
 
 var
   // objetos necessários para o funcionamento
@@ -255,49 +255,49 @@ begin
 end;
 
 
-procedure TEmail.OcutarClick(Sender: TObject);
+procedure TEmails.OcutarClick(Sender: TObject);
 begin
 Senha.PasswordChar := '*';
 Mostrar.Visible := True;
 Ocutar.Visible := False;
 end;
 
-procedure TEmail.MostrarClick(Sender: TObject);
+procedure TEmails.MostrarClick(Sender: TObject);
 begin
 Senha.PasswordChar := #0;
 Ocutar.Visible := True;
 Mostrar.Visible:= False;
 end;
 
-procedure TEmail.SpeedButton2Click(Sender: TObject);
+procedure TEmails.SpeedButton2Click(Sender: TObject);
 begin
 dsAux.DataSet.Prior;
 end;
 
-procedure TEmail.SpeedButton1Click(Sender: TObject);
+procedure TEmails.SpeedButton1Click(Sender: TObject);
 begin
 Para.Text := '';
 end;
 
-procedure TEmail.BitBtn4Click(Sender: TObject);
+procedure TEmails.BitBtn4Click(Sender: TObject);
 begin
 Modulo.cdsEmail.Prior;
 De.Text:=Usuario.Text;
 end;
 
-procedure TEmail.BitBtn3Click(Sender: TObject);
+procedure TEmails.BitBtn3Click(Sender: TObject);
 begin
 Modulo.cdsEmail.Next;
 De.Text:=Usuario.Text;
 
 end;
 
-procedure TEmail.BitBtn6Click(Sender: TObject);
+procedure TEmails.BitBtn6Click(Sender: TObject);
 begin
 dsAux.DataSet.Prior;
 end;
 
-procedure TEmail.BitBtn5Click(Sender: TObject);
+procedure TEmails.BitBtn5Click(Sender: TObject);
 begin
 dsAux.DataSet.Next;
 end;

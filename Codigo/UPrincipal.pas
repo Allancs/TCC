@@ -115,7 +115,7 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
 
 procedure TPrincipal.EnvClick(Sender: TObject);
 begin
-Email.Visible := True;
+Emails.Visible := True;
 end;
 
 procedure TPrincipal.VolClick(Sender: TObject);

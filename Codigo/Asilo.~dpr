@@ -16,7 +16,7 @@ uses
   UIncidentes in 'UIncidentes.pas' {Incidentes},
   UParceiros in 'UParceiros.pas' {Parceiros},
   UProfissionais in 'UProfissionais.pas' {Profissionais},
-  USaude in 'USaude.pas' {Saude},
+  USaude in 'USaude.pas' {Saudes},
   UTarefa in 'UTarefa.pas' {Tarefa},
   UAv in 'UAv.pas' {Avaliacao},
   ULogin in 'ULogin.pas' {Login};
@@ -39,7 +39,7 @@ begin
   Application.CreateForm(TIncidentes, Incidentes);
   Application.CreateForm(TParceiros, Parceiros);
   Application.CreateForm(TProfissionais, Profissionais);
-  Application.CreateForm(TSaude, Saude);
+  Application.CreateForm(TSaudes, Saudes);
   Application.CreateForm(TTarefa, Tarefa);
   Application.CreateForm(TAvaliacao, Avaliacao);
   Application.Run;

@@ -1,9 +1,9 @@
-object Email: TEmail
-  Left = 142
-  Top = 239
+object Emails: TEmails
+  Left = 121
+  Top = 188
   Width = 896
   Height = 434
-  Caption = 'Email'
+  Caption = 'Emails'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

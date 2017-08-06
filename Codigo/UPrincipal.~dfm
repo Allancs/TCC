@@ -1615,7 +1615,7 @@ object Principal: TPrincipal
   object Check: TTimer
     Interval = 1
     OnTimer = CheckTimer
-    Left = 144
+    Left = 160
     Top = 208
   end
 end

@@ -4,7 +4,7 @@ uses
   Forms,
   UPrincipal in 'UPrincipal.pas' {Principal},
   UModulo in 'UModulo.pas' {Modulo: TDataModule},
-  UEmail in 'UEmail.pas' {Email},
+  UEmail in 'UEmail.pas' {Emails},
   UIdoso in 'UIdoso.pas' {Idoso},
   UVoluntarios in 'UVoluntarios.pas' {Voluntarios},
   USMTP in 'USMTP.pas' {SMTP},
@@ -27,7 +27,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
-  Application.CreateForm(TEmail, Email);
+  Application.CreateForm(TEmails, Emails);
   Application.CreateForm(TIdoso, Idoso);
   Application.CreateForm(TVoluntarios, Voluntarios);
   Application.CreateForm(TSMTP, SMTP);
