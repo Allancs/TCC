@@ -99,6 +99,7 @@ type
     procedure anClick(Sender: TObject);
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
+    procedure AvaliClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -160,7 +161,7 @@ begin
 
 procedure TPrincipal.SerClick(Sender: TObject);
 begin
-SMTP.Visible := True;
+SMTPs.Visible := True;
 end;
 
 procedure TPrincipal.ResClick(Sender: TObject);
@@ -367,6 +368,11 @@ end;
 procedure TPrincipal.Sair1Click(Sender: TObject);
 begin
 Application.Terminate;
+end;
+
+procedure TPrincipal.AvaliClick(Sender: TObject);
+begin
+Avaliacao.Visible := True;
 end;
 
 end.
