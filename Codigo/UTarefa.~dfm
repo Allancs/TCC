@@ -1,6 +1,6 @@
 object Tarefa: TTarefa
-  Left = 189
-  Top = 133
+  Left = 229
+  Top = 183
   Width = 800
   Height = 500
   Caption = 'Tarefa'

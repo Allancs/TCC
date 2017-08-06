@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Mask, DBCtrls;
 
 type
-  TSaude = class(TForm)
+  TSaudes = class(TForm)
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
@@ -31,7 +31,7 @@ type
   end;
 
 var
-  Saude: TSaude;
+  Saudes: TSaudes;
 
 implementation
 

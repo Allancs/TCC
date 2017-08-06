@@ -195,7 +195,7 @@ end;
 
 procedure TPrincipal.BitBtn10Click(Sender: TObject);
 begin
-Saude.Visible := True;
+Saudes.Visible := True;
 end;
 
 procedure TPrincipal.BitBtn11Click(Sender: TObject);

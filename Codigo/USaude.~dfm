@@ -1,9 +1,9 @@
-object Saude: TSaude
+object Saudes: TSaudes
   Left = 207
   Top = 125
   Width = 928
   Height = 480
-  Caption = 'Saude'
+  Caption = 'Saudes'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

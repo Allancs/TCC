@@ -1,6 +1,6 @@
 object CadastroAvisos: TCadastroAvisos
-  Left = 190
-  Top = 147
+  Left = 195
+  Top = 121
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]
@@ -536,6 +536,7 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Editar'
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -608,6 +609,7 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Inserir'
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -680,6 +682,7 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Deletar'
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -752,6 +755,7 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Cancelar'
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -824,6 +828,7 @@ object CadastroAvisos: TCadastroAvisos
     Width = 90
     Height = 33
     Caption = '&Salvar'
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
