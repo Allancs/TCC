@@ -165,6 +165,18 @@ type
     sdsUserUSU_SENHA: TStringField;
     dsUser: TDataSource;
     sqlDSLogin: TSQLDataSet;
+    cdsUser: TClientDataSet;
+    dspUser: TDataSetProvider;
+    cdsUserID: TIntegerField;
+    cdsUserUSU_NOME: TStringField;
+    cdsUserUSU_EMAIL: TStringField;
+    cdsUserUSU_LOGIN: TStringField;
+    cdsUserUSU_SENHA: TStringField;
+    sqlDSLoginID: TIntegerField;
+    sqlDSLoginUSU_NOME: TStringField;
+    sqlDSLoginUSU_EMAIL: TStringField;
+    sqlDSLoginUSU_LOGIN: TStringField;
+    sqlDSLoginUSU_SENHA: TStringField;
   private
     { Private declarations }
   public

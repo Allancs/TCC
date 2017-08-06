@@ -60,6 +60,9 @@ type
     DBText1: TDBText;
     Label1: TLabel;
     Label2: TLabel;
+    CadastroConta: TMenuItem;
+    tipo: TLabel;
+    Sair1: TMenuItem;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -94,6 +97,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure CheckTimer(Sender: TObject);
     procedure anClick(Sender: TObject);
+    procedure CadastroContaClick(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -109,7 +114,8 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
   UResponsavel, UCadastroAvisos, UDespesas, UFuncionario, UContas,
   UIncidentes, UParceiros, UProfissionais, USaude, UTarefa,
   UAv,
-  ULogin;
+  ULogin,
+  UCadastroConta;
 
 {$R *.dfm}
 
@@ -326,13 +332,41 @@ begin
                   env.visible := true;
                   ser.visible := true;
                   avali.visible := true;
-                    Exit;
+                  CadastroConta.Visible := true;
+
+
+                    end
+                    else If (ULogin.User = 'padrao')
+                    then
+                    begin
+                    pro.visible := true;
+                    par.visible := true;
+                    con.visible := true;
+                    des.visible := true;
+                    res.visible := true;
+                    fun.visible := true;
+                    resp.visible := true;
+                    vol.visible := true;
+                    env.visible := true;
+                    ser.visible := true;
+                    avali.visible := true;
+
                   End;
 end;
 
 procedure TPrincipal.anClick(Sender: TObject);
 begin
 Modulo.cdsAviso.Next;
+end;
+
+procedure TPrincipal.CadastroContaClick(Sender: TObject);
+begin
+  CadastroContas.Visible := true;
+end;
+
+procedure TPrincipal.Sair1Click(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 end.

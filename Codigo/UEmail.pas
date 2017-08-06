@@ -7,7 +7,8 @@ uses
   Dialogs, Mask, DBCtrls, DB, StdCtrls, Menus, IdMessage, IdIOHandler,
   IdIOHandlerSocket, IdSSLOpenSSL, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdMessageClient, IdSMTP, Buttons, FMTBcd,
-  DBClient, SimpleDS, SqlExpr, Grids, DBGrids;
+  DBClient, SimpleDS, SqlExpr, Grids, DBGrids,
+  jpeg, ExtCtrls;
 
 type
   TEmails = class(TForm)
@@ -56,6 +57,7 @@ type
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
     SpeedButton1: TSpeedButton;
+    Image1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);

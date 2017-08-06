@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, FMTBcd, DB, SqlExpr, Buttons;
+  Dialogs, StdCtrls, Mask, DBCtrls, FMTBcd, DB, SqlExpr, Buttons,
+  jpeg, ExtCtrls;
 
 type
   TIdoso = class(TForm)
@@ -50,6 +51,7 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
+    Image1: TImage;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -57,6 +59,7 @@ type
     procedure btnDeletarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -249,6 +252,17 @@ Modulo.cdsResidente.Edit;
           
           btnGravar.Enabled      := True;
 
+end;
+
+procedure TIdoso.FormCreate(Sender: TObject);
+begin
+if DBEdit1.Text = ''
+Then Begin
+      btnEditar.Enabled := False;
+      End
+      Else Begin
+      btnEditar.Enabled := True;;
+      End;
 end;
 
 end.

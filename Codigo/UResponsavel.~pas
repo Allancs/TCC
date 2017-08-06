@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, FMTBcd, StdCtrls, Buttons, DBClient, SimpleDS, DB, SqlExpr,
-  Mask, DBCtrls;
+  Mask, DBCtrls,
+  jpeg, ExtCtrls;
 
 type
   TResponsavel = class(TForm)
@@ -33,6 +34,7 @@ type
     Cod: TDBEdit;
     sdsAuxx: TSimpleDataSet;
     aux: TDataSource;
+    Image1: TImage;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -100,6 +102,8 @@ procedure TResponsavel.BitBtn1Click(Sender: TObject);
 begin
 DBEdit2.Text := Cod.Text;
 DBEdit3.Text := Name.Text;
+DBEdit2.Visible := True;
+DBEdit3.Visible := True;
 end;
 
 procedure TResponsavel.FormCreate(Sender: TObject);

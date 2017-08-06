@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Mask, DBCtrls,
-  Buttons;
+  Buttons,
+  jpeg, ExtCtrls;
 
 type
   TTarefa = class(TForm)
@@ -22,6 +23,7 @@ type
     btnDeletar: TBitBtn;
     btnCancelar: TBitBtn;
     btnEditar: TBitBtn;
+    Image1: TImage;
   private
     { Private declarations }
   public

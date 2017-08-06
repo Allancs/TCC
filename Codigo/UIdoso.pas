@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, FMTBcd, DB, SqlExpr, Buttons;
+  Dialogs, StdCtrls, Mask, DBCtrls, FMTBcd, DB, SqlExpr, Buttons,
+  jpeg, ExtCtrls;
 
 type
   TIdoso = class(TForm)
@@ -50,6 +51,7 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
+    Image1: TImage;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);

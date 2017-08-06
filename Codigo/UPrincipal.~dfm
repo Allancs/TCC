@@ -1,11 +1,11 @@
 object Principal: TPrincipal
-  Left = 206
-  Top = 146
+  Left = 119
+  Top = 137
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
   ClientHeight = 441
-  ClientWidth = 750
+  ClientWidth = 784
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,7 +21,7 @@ object Principal: TPrincipal
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 750
+    Width = 784
     Height = 441
     Align = alClient
     Picture.Data = {
@@ -336,6 +336,20 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
   end
+  object tipo: TLabel
+    Left = 1
+    Top = 138
+    Width = 53
+    Height = 16
+    Caption = 'UNome'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
   object Env: TBitBtn
     Left = 384
     Top = 50
@@ -411,7 +425,7 @@ object Principal: TPrincipal
   end
   object A: TBitBtn
     Left = 5
-    Top = 274
+    Top = 282
     Width = 115
     Height = 33
     Caption = '&Avisos'
@@ -483,7 +497,7 @@ object Principal: TPrincipal
   end
   object Con: TBitBtn
     Left = 5
-    Top = 394
+    Top = 402
     Width = 115
     Height = 33
     Caption = '&Contas'
@@ -702,7 +716,7 @@ object Principal: TPrincipal
   end
   object I: TBitBtn
     Left = 5
-    Top = 194
+    Top = 202
     Width = 115
     Height = 33
     Caption = '&Incidentes'
@@ -847,7 +861,7 @@ object Principal: TPrincipal
   end
   object Par: TBitBtn
     Left = 5
-    Top = 354
+    Top = 362
     Width = 115
     Height = 33
     Caption = '&Parceiros'
@@ -920,7 +934,7 @@ object Principal: TPrincipal
   end
   object Pro: TBitBtn
     Left = 5
-    Top = 314
+    Top = 322
     Width = 115
     Height = 33
     Caption = '&Profissionais'
@@ -1066,7 +1080,7 @@ object Principal: TPrincipal
   end
   object S: TBitBtn
     Left = 5
-    Top = 154
+    Top = 162
     Width = 115
     Height = 33
     Caption = '&Sa'#250'de'
@@ -1138,7 +1152,7 @@ object Principal: TPrincipal
   end
   object T: TBitBtn
     Left = 5
-    Top = 234
+    Top = 242
     Width = 115
     Height = 33
     Caption = '&Tarefa'
@@ -1609,13 +1623,20 @@ object Principal: TPrincipal
         OnClick = incidentes1Click
       end
     end
-    object TMenuItem
+    object CadastroConta: TMenuItem
+      Caption = 'Cadastro Login'
+      Visible = False
+      OnClick = CadastroContaClick
+    end
+    object Sair1: TMenuItem
+      Caption = 'Sair'
+      OnClick = Sair1Click
     end
   end
   object Check: TTimer
     Interval = 1
     OnTimer = CheckTimer
-    Left = 160
-    Top = 208
+    Left = 632
+    Top = 16
   end
 end

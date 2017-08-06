@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls;
+  Dialogs, StdCtrls, Mask, DBCtrls,
+  jpeg, ExtCtrls;
 
 type
   TParceiros = class(TForm)
@@ -20,6 +21,7 @@ type
     DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
+    Image1: TImage;
   private
     { Private declarations }
   public

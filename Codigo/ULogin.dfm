@@ -3,6 +3,7 @@ object Login: TLogin
   Top = 175
   Width = 515
   Height = 389
+  BorderIcons = [biSystemMenu]
   Caption = 'Login'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, Mask, DBCtrls, FMTBcd, SqlExpr;
+  Dialogs, StdCtrls, Buttons, DB, Mask, DBCtrls, FMTBcd, SqlExpr,
+  jpeg, ExtCtrls;
 
 type
   TSMTP = class(TForm)
@@ -27,6 +28,7 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
+    Image1: TImage;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

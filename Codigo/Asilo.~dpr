@@ -4,7 +4,7 @@ uses
   Forms,
   UPrincipal in 'UPrincipal.pas' {Principal},
   UModulo in 'UModulo.pas' {Modulo: TDataModule},
-  UEmail in 'UEmail.pas' {Email},
+  UEmail in 'UEmail.pas' {Emails},
   UIdoso in 'UIdoso.pas' {Idoso},
   UVoluntarios in 'UVoluntarios.pas' {Voluntarios},
   USMTP in 'USMTP.pas' {SMTP},
@@ -19,7 +19,8 @@ uses
   USaude in 'USaude.pas' {Saudes},
   UTarefa in 'UTarefa.pas' {Tarefa},
   UAv in 'UAv.pas' {Avaliacao},
-  ULogin in 'ULogin.pas' {Login};
+  ULogin in 'ULogin.pas' {Login},
+  UCadastroConta in 'UCadastroConta.pas' {CadastroContas};
 
 {$R *.res}
 
@@ -27,7 +28,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
-  Application.CreateForm(TEmail, Email);
+  Application.CreateForm(TEmails, Emails);
   Application.CreateForm(TIdoso, Idoso);
   Application.CreateForm(TVoluntarios, Voluntarios);
   Application.CreateForm(TSMTP, SMTP);
@@ -42,5 +43,6 @@ begin
   Application.CreateForm(TSaudes, Saudes);
   Application.CreateForm(TTarefa, Tarefa);
   Application.CreateForm(TAvaliacao, Avaliacao);
+  Application.CreateForm(TCadastroContas, CadastroContas);
   Application.Run;
 end.

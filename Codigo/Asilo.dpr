@@ -7,7 +7,7 @@ uses
   UEmail in 'UEmail.pas' {Emails},
   UIdoso in 'UIdoso.pas' {Idoso},
   UVoluntarios in 'UVoluntarios.pas' {Voluntarios},
-  USMTP in 'USMTP.pas' {SMTP},
+  USMTP in 'USMTP.pas' {SMTPs},
   UResponsavel in 'UResponsavel.pas' {Responsavel},
   UCadastroAvisos in 'UCadastroAvisos.pas' {CadastroAvisos},
   UContas in 'UContas.pas' {Contas},
@@ -19,7 +19,8 @@ uses
   USaude in 'USaude.pas' {Saudes},
   UTarefa in 'UTarefa.pas' {Tarefa},
   UAv in 'UAv.pas' {Avaliacao},
-  ULogin in 'ULogin.pas' {Login};
+  ULogin in 'ULogin.pas' {Login},
+  UCadastroConta in 'UCadastroConta.pas' {CadastroContas};
 
 {$R *.res}
 
@@ -30,7 +31,7 @@ begin
   Application.CreateForm(TEmails, Emails);
   Application.CreateForm(TIdoso, Idoso);
   Application.CreateForm(TVoluntarios, Voluntarios);
-  Application.CreateForm(TSMTP, SMTP);
+  Application.CreateForm(TSMTPs, SMTPs);
   Application.CreateForm(TResponsavel, Responsavel);
   Application.CreateForm(TCadastroAvisos, CadastroAvisos);
   Application.CreateForm(TContas, Contas);
@@ -42,5 +43,6 @@ begin
   Application.CreateForm(TSaudes, Saudes);
   Application.CreateForm(TTarefa, Tarefa);
   Application.CreateForm(TAvaliacao, Avaliacao);
+  Application.CreateForm(TCadastroContas, CadastroContas);
   Application.Run;
 end.

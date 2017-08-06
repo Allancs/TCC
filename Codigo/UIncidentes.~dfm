@@ -1,6 +1,6 @@
 object Incidentes: TIncidentes
-  Left = 231
-  Top = 134
+  Left = 97
+  Top = 131
   Width = 928
   Height = 480
   Caption = 'Incidentes'

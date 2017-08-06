@@ -1,6 +1,6 @@
 object Emails: TEmails
-  Left = 184
-  Top = 187
+  Left = 121
+  Top = 188
   Width = 896
   Height = 434
   Caption = 'Emails'

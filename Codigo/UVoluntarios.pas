@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Buttons, DB, StdCtrls, Mask, DBCtrls, FMTBcd, SqlExpr;
+  Dialogs, Buttons, DB, StdCtrls, Mask, DBCtrls, FMTBcd, SqlExpr,
+  jpeg, ExtCtrls;
 
 type
   TVoluntarios = class(TForm)
@@ -38,6 +39,7 @@ type
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
     BitBtn7: TBitBtn;
+    Image1: TImage;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

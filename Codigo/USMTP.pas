@@ -4,10 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, Mask, DBCtrls, FMTBcd, SqlExpr;
+  Dialogs, StdCtrls, Buttons, DB, Mask, DBCtrls, FMTBcd, SqlExpr,
+  jpeg, ExtCtrls;
 
 type
-  TSMTP = class(TForm)
+  TSMTPs = class(TForm)
     Label1: TLabel;
     DBEdit1: TDBEdit;
     DataSource1: TDataSource;
@@ -27,6 +28,7 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
+    Image1: TImage;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -42,7 +44,7 @@ type
   end;
 
 var
-  SMTP: TSMTP;
+  SMTPs: TSMTPs;
 
 implementation
 
@@ -50,7 +52,7 @@ uses UModulo;
 
 {$R *.dfm}
 
-procedure TSMTP.btnEditarClick(Sender: TObject);
+procedure TSMTPs.btnEditarClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Edit;
           btnInserir.Enabled    := False;
@@ -68,7 +70,7 @@ Modulo.cdsEmail.Edit;
           btnGravar.Enabled      := True;
 end;
 
-procedure TSMTP.btnInserirClick(Sender: TObject);
+procedure TSMTPs.btnInserirClick(Sender: TObject);
 Var NReg : integer;
 begin
 
@@ -108,7 +110,7 @@ begin
            DBEdit2.SetFocus;
 end;
 
-procedure TSMTP.btnDeletarClick(Sender: TObject);
+procedure TSMTPs.btnDeletarClick(Sender: TObject);
 begin
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled       := False;
@@ -131,7 +133,7 @@ begin
 
 end;
 
-procedure TSMTP.btnCancelarClick(Sender: TObject);
+procedure TSMTPs.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Cancel;
           DBEdit2.Enabled       := False;
@@ -151,7 +153,7 @@ Modulo.cdsEmail.Cancel;
 
 end;
 
-procedure TSMTP.btnGravarClick(Sender: TObject);
+procedure TSMTPs.btnGravarClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Post;
 
@@ -160,17 +162,17 @@ Modulo.cdsEmail.Post;
          btnCancelar.Click;
 end;
 
-procedure TSMTP.EsquerdaClick(Sender: TObject);
+procedure TSMTPs.EsquerdaClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Prior;
 end;
 
-procedure TSMTP.DireitaClick(Sender: TObject);
+procedure TSMTPs.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsEmail.Next;
 end;
 
-procedure TSMTP.FormCreate(Sender: TObject);
+procedure TSMTPs.FormCreate(Sender: TObject);
 begin
 if DBEdit1.Text = ''
 Then Begin

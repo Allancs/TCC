@@ -48,6 +48,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure SpeedButton3Click(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -197,6 +198,17 @@ end;
 procedure TVoluntarios.SpeedButton4Click(Sender: TObject);
 begin
 Modulo.cdsVoluntario.First;
+end;
+
+procedure TVoluntarios.FormCreate(Sender: TObject);
+begin
+if DBEdit1.Text = ''
+Then Begin
+      btnEditar.Enabled := False;
+      End
+      Else Begin
+      btnEditar.Enabled := True;;
+      End;
 end;
 
 end.

@@ -92,7 +92,7 @@ begin
 
            Modulo.sqlDSLogin.RecNo; // Estaciona no Registro corrente
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
-           //Principal.UEmail.Caption := Modulo.sqlDSLogin.Fields[2].AsString;
+           Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
 
 end;

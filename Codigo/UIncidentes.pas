@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Mask;
+  Dialogs, StdCtrls, DBCtrls, Mask,
+  jpeg, ExtCtrls;
 
 type
   TIncidentes = class(TForm)
@@ -21,6 +22,7 @@ type
     DBMemo1: TDBMemo;
     DBMemo2: TDBMemo;
     Label7: TLabel;
+    Image1: TImage;
   private
     { Private declarations }
   public

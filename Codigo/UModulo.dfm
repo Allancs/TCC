@@ -1,9 +1,9 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 14
-  Top = 164
-  Height = 574
-  Width = 1040
+  Left = 221
+  Top = 162
+  Height = 571
+  Width = 679
   object Conexao: TSQLConnection
     ConnectionName = 'Asilo'
     DriverName = 'Interbase'
@@ -863,13 +863,14 @@ object Modulo: TModulo
     Top = 368
   end
   object sdsUser: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conexao2
     DataSet.CommandText = 'select * from USUARIOS'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 96
+    Left = 144
     Top = 368
     object sdsUserID: TIntegerField
       FieldName = 'ID'
@@ -901,16 +902,78 @@ object Modulo: TModulo
     end
   end
   object dsUser: TDataSource
-    DataSet = sdsUser
-    Left = 144
+    DataSet = cdsUser
+    Left = 248
     Top = 368
   end
   object sqlDSLogin: TSQLDataSet
+    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Conexao2
-    Left = 176
+    Left = 96
     Top = 368
+    object sqlDSLoginID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object sqlDSLoginUSU_NOME: TStringField
+      FieldName = 'USU_NOME'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_EMAIL: TStringField
+      FieldName = 'USU_EMAIL'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_LOGIN: TStringField
+      FieldName = 'USU_LOGIN'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_SENHA: TStringField
+      FieldName = 'USU_SENHA'
+      Required = True
+      Size = 40
+    end
+  end
+  object cdsUser: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspUser'
+    Left = 240
+    Top = 416
+    object cdsUserID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object cdsUserUSU_NOME: TStringField
+      FieldName = 'USU_NOME'
+      Required = True
+      Size = 40
+    end
+    object cdsUserUSU_EMAIL: TStringField
+      FieldName = 'USU_EMAIL'
+      Required = True
+      Size = 40
+    end
+    object cdsUserUSU_LOGIN: TStringField
+      FieldName = 'USU_LOGIN'
+      Required = True
+      Size = 40
+    end
+    object cdsUserUSU_SENHA: TStringField
+      FieldName = 'USU_SENHA'
+      Required = True
+      Size = 40
+    end
+  end
+  object dspUser: TDataSetProvider
+    DataSet = sqlDSLogin
+    Left = 200
+    Top = 416
   end
 end
