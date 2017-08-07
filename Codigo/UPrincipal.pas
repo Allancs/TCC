@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, DBCtrls, Menus,
   OleCtrls, SHDocVw,
-  jpeg;
+  jpeg,IniFiles;
 
 type
   TPrincipal = class(TForm)
