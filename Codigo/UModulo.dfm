@@ -3,7 +3,7 @@ object Modulo: TModulo
   Left = 231
   Top = 162
   Height = 571
-  Width = 669
+  Width = 890
   object Conexao: TSQLConnection
     ConnectionName = 'Asilo'
     DriverName = 'Interbase'
@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=PC:C:\Asilo\Banco\BANCO.FDB'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'

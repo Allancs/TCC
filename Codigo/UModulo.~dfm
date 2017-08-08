@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=PC:C:\Asilo\Banco\BANCO.FDB'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -50,7 +50,6 @@ object Modulo: TModulo
     end
   end
   object cdsAviso: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspAviso'
@@ -113,7 +112,6 @@ object Modulo: TModulo
     Top = 56
   end
   object cdsFun: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspFun'
@@ -186,7 +184,6 @@ object Modulo: TModulo
     end
   end
   object cdsConta: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspConta'
@@ -220,7 +217,6 @@ object Modulo: TModulo
     end
   end
   object cdsInc: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspInc'
@@ -267,7 +263,6 @@ object Modulo: TModulo
     Top = 208
   end
   object cdsLigacoes: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspLigacoes'
@@ -306,7 +301,6 @@ object Modulo: TModulo
     end
   end
   object cdsParceiro: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspParceiro'
@@ -402,7 +396,6 @@ object Modulo: TModulo
     Top = 64
   end
   object cdsProfisional: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspProfisional'
@@ -470,7 +463,6 @@ object Modulo: TModulo
     Top = 112
   end
   object cdsSaude: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspSaude'
@@ -516,7 +508,6 @@ object Modulo: TModulo
     end
   end
   object cdsResidente: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspResidente'
@@ -605,7 +596,6 @@ object Modulo: TModulo
     end
   end
   object cdsTarefa: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTarefa'
@@ -637,7 +627,6 @@ object Modulo: TModulo
     Top = 216
   end
   object cdsVoluntario: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspVoluntario'
@@ -712,7 +701,6 @@ object Modulo: TModulo
     Top = 112
   end
   object cdsDespesas: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspDespesas'
@@ -764,7 +752,6 @@ object Modulo: TModulo
     Top = 304
   end
   object cdsEmail: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspEmail'
@@ -863,6 +850,7 @@ object Modulo: TModulo
     Top = 360
   end
   object sdsUser: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conexao2
     DataSet.CommandText = 'select * from USUARIOS'
@@ -902,6 +890,7 @@ object Modulo: TModulo
     Top = 360
   end
   object sqlDSLogin: TSQLDataSet
+    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
@@ -934,6 +923,7 @@ object Modulo: TModulo
     end
   end
   object cdsUser: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'

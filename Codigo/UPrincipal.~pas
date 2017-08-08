@@ -356,10 +356,10 @@ Despesas.btnDeletar.Visible := false;
 //Responsavel.btnDeletar.Visible := false;
 //Funcionario.btnDeletar.Visible := false;
 Voluntarios.btnDeletar.Visible := false;
-Email.
 Emails.Mostrar.Visible := false;
 Emails.Ocutar.Visible := false;
 Ser.Visible := false;
+Emails.Baixo.Visible := false;
 
 end;
 end;
