@@ -7,7 +7,8 @@ uses
   Dialogs, Mask, DBCtrls, DB, StdCtrls, Menus, IdMessage, IdIOHandler,
   IdIOHandlerSocket, IdSSLOpenSSL, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdMessageClient, IdSMTP, Buttons, FMTBcd,
-  DBClient, SimpleDS, SqlExpr, Grids, DBGrids;
+  DBClient, SimpleDS, SqlExpr, Grids, DBGrids,
+  jpeg, ExtCtrls;
 
 type
   TEmails = class(TForm)
@@ -22,14 +23,6 @@ type
     Menssagem: TMemo;
     Nome: TEdit;
     DataSource1: TDataSource;
-    Label11: TLabel;
-    SMTP: TDBEdit;
-    Label12: TLabel;
-    Porta: TDBEdit;
-    Label13: TLabel;
-    Usuario: TDBEdit;
-    Label14: TLabel;
-    Senha: TDBEdit;
     IdSMTP1: TIdSMTP;
     IdSSLIOHandlerSocket1: TIdSSLIOHandlerSocket;
     IdMessage1: TIdMessage;
@@ -46,16 +39,26 @@ type
     Label10: TLabel;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    Ocutar: TBitBtn;
-    Mostrar: TBitBtn;
     Parceiros: TRadioButton;
     Voluntarios: TRadioButton;
     dsAux: TDataSource;
-    BitBtn3: TBitBtn;
-    BitBtn4: TBitBtn;
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
     SpeedButton1: TSpeedButton;
+    Baixo: TPanel;
+    SMTP: TDBEdit;
+    Label11: TLabel;
+    Porta: TDBEdit;
+    Label12: TLabel;
+    Usuario: TDBEdit;
+    Label13: TLabel;
+    Label14: TLabel;
+    Senha: TDBEdit;
+    Ocutar: TBitBtn;
+    Mostrar: TBitBtn;
+    Image1: TImage;
+    BitBtn4: TBitBtn;
+    BitBtn3: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);

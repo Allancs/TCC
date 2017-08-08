@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, DBCtrls, Menus,
   OleCtrls, SHDocVw,
-  jpeg;
+  jpeg,IniFiles;
 
 type
   TPrincipal = class(TForm)
@@ -95,7 +95,6 @@ type
     procedure pxClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure CheckTimer(Sender: TObject);
     procedure anClick(Sender: TObject);
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
@@ -301,11 +300,7 @@ begin
         Application.Terminate;
         Exit;
         End;
-end;
-
-procedure TPrincipal.CheckTimer(Sender: TObject);
-begin
-    If (ULogin.User = 'admin')
+         If (ULogin.User = 'admin')
              Then Begin
                   Cadastro.Visible := true;
                   Conta.Visible := true;
@@ -351,9 +346,25 @@ begin
                     env.visible := true;
                     ser.visible := true;
                     avali.visible := true;
+                    //Saudes.btnDeletar.Visible := false;
+//Incidentes.btnDeletar.Visible := false;
+Tarefa.btnDeletar.Visible := false;
+CadastroAvisos.btnDeletar.Visible := false;
+//Parceiros.btnDeletar.Visible := false;
+Contas.btnDeletar.Visible := false;
+Despesas.btnDeletar.Visible := false;
+//Responsavel.btnDeletar.Visible := false;
+//Funcionario.btnDeletar.Visible := false;
+Voluntarios.btnDeletar.Visible := false;
+Email.
+Emails.Mostrar.Visible := false;
+Emails.Ocutar.Visible := false;
+Ser.Visible := false;
 
-                  End;
 end;
+end;
+
+
 
 procedure TPrincipal.anClick(Sender: TObject);
 begin

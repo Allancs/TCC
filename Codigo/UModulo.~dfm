@@ -1,9 +1,9 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 221
+  Left = 231
   Top = 162
   Height = 571
-  Width = 679
+  Width = 669
   object Conexao: TSQLConnection
     ConnectionName = 'Asilo'
     DriverName = 'Interbase'
@@ -837,14 +837,14 @@ object Modulo: TModulo
     Top = 8
   end
   object Conexao2: TSQLConnection
-    ConnectionName = 'Asilo'
+    ConnectionName = 'LoginServer'
     DriverName = 'Interbase'
     GetDriverFunc = 'getSQLDriverINTERBASE'
     LibraryName = 'dbexpint.dll'
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'Database=C:\Asilo\Banco\LOGIN.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -858,11 +858,11 @@ object Modulo: TModulo
       'Interbase TransIsolation=ReadCommited'
       'Trim Char=False')
     VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connected = True
     Left = 16
     Top = 360
   end
   object sdsUser: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conexao2
     DataSet.CommandText = 'select * from USUARIOS'
@@ -876,25 +876,21 @@ object Modulo: TModulo
       Required = True
     end
     object sdsUserUSU_NOME: TStringField
-      DisplayLabel = 'Nome'
       FieldName = 'USU_NOME'
       Required = True
       Size = 40
     end
     object sdsUserUSU_EMAIL: TStringField
-      DisplayLabel = 'Email'
       FieldName = 'USU_EMAIL'
       Required = True
       Size = 40
     end
     object sdsUserUSU_LOGIN: TStringField
-      DisplayLabel = 'Login'
       FieldName = 'USU_LOGIN'
       Required = True
       Size = 40
     end
     object sdsUserUSU_SENHA: TStringField
-      DisplayLabel = 'Senha'
       FieldName = 'USU_SENHA'
       Required = True
       Size = 40
@@ -902,24 +898,47 @@ object Modulo: TModulo
   end
   object dsUser: TDataSource
     DataSet = cdsUser
-    Left = 248
-    Top = 368
+    Left = 208
+    Top = 360
   end
   object sqlDSLogin: TSQLDataSet
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Conexao2
-    Left = 168
-    Top = 368
+    Left = 248
+    Top = 360
+    object sqlDSLoginID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object sqlDSLoginUSU_NOME: TStringField
+      FieldName = 'USU_NOME'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_EMAIL: TStringField
+      FieldName = 'USU_EMAIL'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_LOGIN: TStringField
+      FieldName = 'USU_LOGIN'
+      Required = True
+      Size = 40
+    end
+    object sqlDSLoginUSU_SENHA: TStringField
+      FieldName = 'USU_SENHA'
+      Required = True
+      Size = 40
+    end
   end
   object cdsUser: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'
-    Left = 208
-    Top = 368
+    Left = 168
+    Top = 360
     object cdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -947,7 +966,7 @@ object Modulo: TModulo
   end
   object dspUser: TDataSetProvider
     DataSet = sdsUser
-    Left = 128
-    Top = 368
+    Left = 120
+    Top = 360
   end
 end

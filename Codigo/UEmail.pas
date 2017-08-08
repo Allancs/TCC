@@ -12,25 +12,7 @@ uses
 
 type
   TEmails = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label9: TLabel;
-    De: TEdit;
-    Assunto: TEdit;
-    Para: TEdit;
-    Menssagem: TMemo;
-    Nome: TEdit;
     DataSource1: TDataSource;
-    Label11: TLabel;
-    SMTP: TDBEdit;
-    Label12: TLabel;
-    Porta: TDBEdit;
-    Label13: TLabel;
-    Usuario: TDBEdit;
-    Label14: TLabel;
-    Senha: TDBEdit;
     IdSMTP1: TIdSMTP;
     IdSSLIOHandlerSocket1: TIdSSLIOHandlerSocket;
     IdMessage1: TIdMessage;
@@ -40,24 +22,45 @@ type
     DeletarTodososAnexos1: TMenuItem;
     sqlAux: TSQLQuery;
     sdsAux: TSimpleDataSet;
-    GroupBox1: TGroupBox;
-    Label3: TLabel;
-    edtPesquisa: TEdit;
-    getEmail: TDBEdit;
-    Label10: TLabel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    dsAux: TDataSource;
+    Baixo: TPanel;
+    SMTP: TDBEdit;
+    Label11: TLabel;
+    Porta: TDBEdit;
+    Label12: TLabel;
+    Usuario: TDBEdit;
+    Label13: TLabel;
+    Label14: TLabel;
+    Senha: TDBEdit;
     Ocutar: TBitBtn;
     Mostrar: TBitBtn;
+    Image1: TImage;
+    BitBtn4: TBitBtn;
+    BitBtn3: TBitBtn;
+    LadoEsquerdo: TPanel;
+    Menssagem: TMemo;
+    Para: TEdit;
+    Nome: TEdit;
+    Assunto: TEdit;
+    De: TEdit;
+    Label9: TLabel;
+    Label6: TLabel;
+    Label5: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
+    SpeedButton1: TSpeedButton;
+    BitBtn2: TBitBtn;
+    BitBtn6: TBitBtn;
+    BitBtn5: TBitBtn;
+    BitBtn1: TBitBtn;
+    getEmail: TDBEdit;
+    Label10: TLabel;
+    edtPesquisa: TEdit;
+    Label3: TLabel;
     Parceiros: TRadioButton;
     Voluntarios: TRadioButton;
-    dsAux: TDataSource;
-    BitBtn3: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
-    SpeedButton1: TSpeedButton;
-    Image1: TImage;
+    EmailReal: TLabel;
+    Timer1: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);
@@ -73,6 +76,7 @@ type
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn6Click(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -302,6 +306,17 @@ end;
 procedure TEmails.BitBtn5Click(Sender: TObject);
 begin
 dsAux.DataSet.Next;
+end;
+
+procedure TEmails.Timer1Timer(Sender: TObject);
+begin
+If (edtPesquisa.Text = '')
+then
+begin
+   EmailReal.Caption := 'Email : ';
+end;
+
+EmailReal.Caption := 'Email : '+getEmail.Text;
 end;
 
 end.

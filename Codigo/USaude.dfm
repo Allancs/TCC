@@ -1,6 +1,6 @@
 object Saudes: TSaudes
-  Left = 202
-  Top = 123
+  Left = 187
+  Top = 130
   Width = 800
   Height = 500
   Caption = 'Saudes'
