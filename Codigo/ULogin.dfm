@@ -1,6 +1,6 @@
 object Login: TLogin
-  Left = 275
-  Top = 175
+  Left = 285
+  Top = 183
   Width = 516
   Height = 389
   BorderIcons = [biSystemMenu]

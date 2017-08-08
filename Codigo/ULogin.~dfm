@@ -1,7 +1,7 @@
 object Login: TLogin
   Left = 275
   Top = 175
-  Width = 515
+  Width = 516
   Height = 389
   BorderIcons = [biSystemMenu]
   Caption = 'Login'
@@ -19,7 +19,7 @@ object Login: TLogin
   object Image3: TImage
     Left = 0
     Top = 0
-    Width = 499
+    Width = 500
     Height = 350
     Align = alClient
     Picture.Data = {
