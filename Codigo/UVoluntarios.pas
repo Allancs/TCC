@@ -9,37 +9,32 @@ uses
 
 type
   TVoluntarios = class(TForm)
-    GroupBox1: TGroupBox;
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
     DataSource1: TDataSource;
-    Label2: TLabel;
-    DBEdit2: TDBEdit;
-    Label3: TLabel;
-    DBEdit3: TDBEdit;
-    Label4: TLabel;
-    DBEdit4: TDBEdit;
-    Label5: TLabel;
-    DBEdit5: TDBEdit;
-    btnEditar: TSpeedButton;
-    btnInserir: TSpeedButton;
-    btnDeletar: TSpeedButton;
-    btnCancelar: TSpeedButton;
-    btnGravar: TSpeedButton;
-    btnAtualizar: TSpeedButton;
-    Direita: TSpeedButton;
-    Esquerda: TSpeedButton;
-    SpeedButton3: TSpeedButton;
-    SpeedButton4: TSpeedButton;
     sqlAux: TSQLQuery;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
-    BitBtn7: TBitBtn;
     Image1: TImage;
+    LadoEsquerdo: TPanel;
+    Baixo: TPanel;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnGravar: TBitBtn;
+    btnInserir: TBitBtn;
+    Esquerda: TBitBtn;
+    Direita: TBitBtn;
+    DBEdit5: TDBEdit;
+    Label5: TLabel;
+    DBEdit4: TDBEdit;
+    Label4: TLabel;
+    DBEdit3: TDBEdit;
+    Label3: TLabel;
+    DBEdit2: TDBEdit;
+    Label2: TLabel;
+    DBEdit1: TDBEdit;
+    Label1: TLabel;
+    Oquee: TButton;
+    URL: TEdit;
+    OQue: TMemo;
+    Label7: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -51,6 +46,7 @@ type
     procedure SpeedButton3Click(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure OqueeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,7 +67,7 @@ begin
 Modulo.cdsVoluntario.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-          btnAtualizar.Enabled  := False;
+
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -91,7 +87,7 @@ begin
 
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-          btnAtualizar.Enabled  := False;
+
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -155,10 +151,8 @@ Modulo.cdsVoluntario.Cancel;
           DBEdit3.Enabled       := False;
           DBEdit4.Enabled       := False;
           DBEdit5.Enabled       := False;
-
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
-          btnAtualizar.Enabled  := True;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
@@ -211,6 +205,13 @@ Then Begin
       Else Begin
       btnEditar.Enabled := True;;
       End;
+end;
+
+procedure TVoluntarios.OqueeClick(Sender: TObject);
+begin
+OQue.Visible := True;
+URL.Text := 'http://www.voluntarios.com.br/oque_e_voluntariado.htm';
+URL.Visible := True;
 end;
 
 end.
