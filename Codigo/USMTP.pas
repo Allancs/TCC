@@ -9,26 +9,35 @@ uses
 
 type
   TSMTPs = class(TForm)
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
     DataSource1: TDataSource;
-    Label2: TLabel;
-    DBEdit2: TDBEdit;
-    Label3: TLabel;
-    DBEdit3: TDBEdit;
-    Label4: TLabel;
-    DBEdit4: TDBEdit;
+    sqlAux: TSQLQuery;
+    LadoEsquerdo: TPanel;
+    Baixo: TPanel;
+    Image1: TImage;
     Label5: TLabel;
+    Label4: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
     DBEdit5: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit1: TDBEdit;
     btnEditar: TBitBtn;
     btnInserir: TBitBtn;
+    btnGravar: TBitBtn;
     btnDeletar: TBitBtn;
     btnCancelar: TBitBtn;
-    btnGravar: TBitBtn;
-    Esquerda: TBitBtn;
     Direita: TBitBtn;
-    sqlAux: TSQLQuery;
-    Image1: TImage;
+    Esquerda: TBitBtn;
+    Oque: TMemo;
+    Oquee: TButton;
+    Emails: TButton;
+    OQue2: TMemo;
+    URL: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -37,6 +46,8 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure OqueeClick(Sender: TObject);
+    procedure EmailsClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,15 +91,13 @@ begin
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
 
-          DBEdit2.Enabled       := True;
-          DBEdit3.Enabled       := True;
+        //  DBEdit2.Enabled       := True;
+        //  DBEdit3.Enabled       := True;
           DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
 
 
           btnGravar.Enabled      := True;
-
-
 
           sqlAux.Close;
 
@@ -100,14 +109,14 @@ begin
            If sqlAux.FieldByName('ULTIMO').Value = Null
            Then NReg :=1
            Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
-
            Modulo.cdsEmail.Insert;
 
-
+           Modulo.cdsEmailSMTP.Text := 'smtp.gmail.com';
+           Modulo.cdsEmailPORT.Text := IntToStr(465);
            Modulo.cdsEmailID.Value := NReg;
 
 
-           DBEdit2.SetFocus;
+           DBEdit4.SetFocus;
 end;
 
 procedure TSMTPs.btnDeletarClick(Sender: TObject);
@@ -181,6 +190,22 @@ Then Begin
       Else Begin
       btnEditar.Enabled := True;;
       End;
+end;
+
+procedure TSMTPs.OqueeClick(Sender: TObject);
+begin
+Oque.Visible := True;
+Oque2.Visible := False;
+Url.Text := 'https://pt.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol';
+Url.Visible := True;
+end;
+
+procedure TSMTPs.EmailsClick(Sender: TObject);
+begin
+Oque.Visible := False;
+Oque2.Visible := True;
+Url.Text := 'https://support.google.com/a/answer/176600?hl=pt-BR';
+Url.Visible := True;
 end;
 
 end.
